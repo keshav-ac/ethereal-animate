@@ -6,6 +6,7 @@ import { FloatingActionButton } from "@/components/FloatingActionButton";
 import { MoodSelector } from "@/components/MoodSelector";
 import { HabitCard } from "@/components/HabitCard";
 import { ProgressRing } from "@/components/ProgressRing";
+import { Navigation } from "@/components/Navigation";
 
 // Mock data
 const mockHabits = [
@@ -73,7 +74,7 @@ const Index = () => {
   const overallProgress = (completedHabits / totalHabits) * 100;
 
   return (
-    <div className="min-h-screen p-6 pb-24">
+    <div className="min-h-screen p-6 pb-32">
       {/* Header */}
       <motion.header 
         className="mb-8"
@@ -190,6 +191,9 @@ const Index = () => {
       <FloatingActionButton 
         onClick={() => console.log("Add new habit")}
       />
+
+      {/* Navigation */}
+      <Navigation />
     </div>
   );
 };
